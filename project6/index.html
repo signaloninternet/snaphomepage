@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    
+    
+    .small-button {
+      padding: 0.5rem 1rem; 
+      font-size: 0.875rem; 
+      transition: background-color 0.3s ease;
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="h-screen w-screen flex justify-center">
+    <div class="container h-screen py-4 relative">
+      <div class="mobile bg-white hidden w-9/12 h-full absolute right-0 z-10">
+        <div class="flex justify-end p-4">
+          <button class="cut text-2xl font-semibold text-gray-700 hover:text-black transition">
+            &times;
+          </button>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <nav class="mb-8">
+            <ul class="flex flex-col gap-8 items-center">
+              <!-- Features dropdown -->
+              <li class="relative group">
+                <button class="flex items-center text-gray-700 font-medium hover:text-indigo-600 transition">
+                  Features <i class="ri-arrow-drop-down-line ml-1 text-lg"></i>
+                </button>
+                <ul class="submenu z-50 absolute top-full left-0 hidden bg-white p-3 rounded-lg shadow-lg group-hover:block w-48">
+                  <li>
+                    <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                      <img class="object-cover w-6 h-6" src="./images/icon-todo.svg" alt="Todo">
+                      <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Todo List</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                      <img class="object-cover w-6 h-6" src="./images/icon-calendar.svg" alt="Calendar">
+                      <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Calendar</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                      <img class="object-cover w-6 h-6" src="./images/icon-reminders.svg" alt="Reminders">
+                      <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Reminders</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                      <img class="object-cover w-6 h-6" src="./images/icon-planning.svg" alt="Planning">
+                      <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Planning</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+      
+
+              <li class="relative group">
+                <button class="flex items-center text-gray-700 font-medium hover:text-indigo-600 transition">
+                  Company <i class="ri-arrow-drop-down-line ml-1 text-lg"></i>
+                </button>
+                <ul class="z-50 submenu absolute top-full left-0 hidden bg-white p-3 rounded-lg shadow-lg group-hover:block w-48">
+                  <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                    <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">History</a>
+                  </li>
+                  <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                    <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Our Team</a>
+                  </li>
+                  <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                    <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Blog</a>
+                  </li>
+                </ul>
+              </li>
+      
+              <li><button class="text-gray-700 font-medium hover:text-indigo-600 transition">Careers</button></li>
+              <li><button class="text-gray-700 font-medium hover:text-indigo-600 transition">About</button></li>
+            </ul>
+          </nav>
+      
+          <div class="flex flex-col items-center">
+            <button class="text-gray-700 font-medium mb-2">Login</button>
+            <button class="border-2 border-gray-700 text-gray-700 font-medium py-1 px-4 rounded-full hover:bg-gray-100 transition">Register</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="px-4 sm:px-0 nav flex justify-between bg-white h-12">
+        <div class="nav1 flex items-center align-center justify-center gap-12">
+          <img src="./images/logo.svg" alt="Logo">
+          <div class="buttons hidden md:flex md:items-center md:gap-12">
+            <nav class="p-4">
+              <ul class="flex flex-row gap-12 items-center">
+                <!-- Features dropdown -->
+                <li class="relative group">
+                  <button class="flex items-center text-gray-700 font-medium hover:text-indigo-600 transition">
+                    Features <i class="ri-arrow-drop-down-line ml-1 text-lg"></i>
+                  </button>
+                  <ul class="submenu absolute top-full left-0 hidden bg-white p-3 rounded-lg shadow-lg group-hover:block w-48">
+                    <li>
+                      <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                        <img class="object-cover w-6 h-6" src="./images/icon-todo.svg" alt="Todo">
+                        <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Todo List</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                        <img class="object-cover w-6 h-6" src="./images/icon-calendar.svg" alt="Calendar">
+                        <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Calendar</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                        <img class="object-cover w-6 h-6" src="./images/icon-reminders.svg" alt="Reminders">
+                        <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Reminders</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list flex flex-row items-center gap-4 p-3 hover:bg-indigo-50 rounded-md transition">
+                        <img class="object-cover w-6 h-6" src="./images/icon-planning.svg" alt="Planning">
+                        <a href="#" class="text-gray-700 font-medium hover:text-indigo-600">Planning</a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+            
+                <!-- Company dropdown -->
+                <li class="relative group">
+                  <button class="flex items-center text-gray-700 font-medium hover:text-indigo-600 transition">
+                    Company <i class="ri-arrow-drop-down-line ml-1 text-lg"></i>
+                  </button>
+                  <ul class="submenu absolute top-full left-0 hidden bg-white p-3 rounded-lg shadow-lg group-hover:block w-48">
+                    <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                      <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">History</a>
+                    </li>
+                    <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                      <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Our Team</a>
+                    </li>
+                    <li class="p-3 hover:bg-indigo-50 rounded-md transition">
+                      <a href="#" class="block text-gray-700 font-medium hover:text-indigo-600">Blog</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            
+            <button>Careers</button>
+            <button>About</button>
+          </div>
+        </div>
+        <div class="hidden nav2 sm:flex justify-between items-center gap-12">
+          <button>Login</button>
+          <button class="border border-zinc-400 bg-transparent text-zinc-600 px-4 py-2 rounded my-5 hover:bg-gray-800 hover:text-white transition-colors duration-300 ease-in-out">
+            Register
+          </button>
+          
+        </div>
+        <button class="sm:hidden domman"><i class="ri-menu-line text-xl"></i></button>
+      </div>
+      <div class="h-full flex sm:flex-row flex-col justify-center align-center ">
+        <img class="hero-image my-6 w-full sm:hidden" src="./images/image-hero-mobile.png" alt="Hero Image">
+        <div class="onemore flex flex-col justify-center align-center sm:w-1/2 sm:px-4 sm:py-4 sm:align-start">
+          <h3 class="text-left text-3xl font-bold my-5 sm:mx-4 max-w mx-auto ">Make remote work</h3>
+          <p class="text-center w-4/5 sm:text-left text-gray-500 my-5 max-w mx-auto sm:mx-4">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <button class=" w-44 self-center sm:self-start bg-black text-white small-button rounded my-5 hover:bg-blue-800">Learn More</button>
+
+          <div class="px-6 flex flex-row bg-white justify-between items-center mt-10">
+            <img class="w-12 object-cover" src="./images/client-databiz.svg" alt="Databiz">
+            <img class="w-12 object-cover" src="./images/client-audiophile.svg" alt="Audiophile">
+            <img class="w-12 object-cover" src="./images/client-meet.svg" alt="Meet">
+            <img class="w-12 object-cover" src="./images/client-maker.svg" alt="Maker">
+          </div>
+        </div>
+        <div class="hidden sm:flex self-center image w-1/2">
+          <img class="h-1/2 w-1/2 ml-52" src="./images/image-hero-desktop.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
